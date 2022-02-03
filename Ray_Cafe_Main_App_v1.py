@@ -33,34 +33,26 @@ def Courier_options():
     4. delete Courier  
     ''')
 
-def create_new_product():
-    input_new_product=input('enter new product:')
-    add_product_to_file('product.txt', input_new_product)
-    # print_product_list() function that prints out product list
+
+import create_new_product
+create_new_product()
+
+import update_product_list
+update_product_list()
+
+import delete_product_from_list
+delete_product_from_list()
 
 
-def update_product_list (): 
-    product_list = display('product.txt')
-    product_index= int(input('enter the index of the product:'))
-    new_product_name=input('enter another product:')
-    product_list[product_index] = new_product_name + '\n'
+import Create_new_Courier
+Create_new_Courier()
 
-    with open('product.txt', 'w') as file:
-	    file.writelines(product_list)
-    
+import update_Courier_list
+update_Courier_list()
 
+import delete_Courier_from_list
+delete_Courier_from_list()
 
-
-def delete_product_from_list ():
-    product_list = display('product.txt')
-    input_product_index = int(input('enter product index:'))
-    product_list.pop(input_product_index)
-    
-    with open('product.txt', 'w') as file:
-	    file.writelines(product_list.pop)
-
-
- 
 
 
 def display(filename):
@@ -82,16 +74,6 @@ def display(filename):
 
 
 
-def add_product_to_file(filename, product_name):
-    
-    fd = open(filename, "a+")
-    fd.seek(0)
-    data = fd.read(100)
-    if len(data) > 0:
-        fd.write("\n")
-
-    fd.write(product_name)
-    fd.close()
 
 # Start Main Menu
 while True:
@@ -127,9 +109,10 @@ while True:
             
             # delete item in product list
             elif product_menu == 4:
-                Amended_product_list = delete_product_from_list()
+                delete_product_from_list()
                 break
                 
+
 #enter Courier menu
     elif user_option == 2: 
 
@@ -147,13 +130,14 @@ while True:
                 continue
             # create new Courier 
             elif courier_menu == 2:
-               import  Create_new_courier.py
+                Create_new_Courier()
+
                 
             elif courier_menu == 3:
-                update_courier_list = item_update()
+                update_Courier_list()
             
             elif courier_menu == 4:
-                Amended_courier_list = delete_item_list()
+                delete_Courier_from_list()
                 break
 
 # print ('good bye')

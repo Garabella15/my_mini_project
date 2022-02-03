@@ -1,11 +1,10 @@
-def update_product_list (): 
+def delete_product_from_list ():
     product_list = display('product.txt')
-    product_index= int(input('enter the index of the product:'))
-    new_product_name=input('enter another product:')
-    product_list[product_index] = new_product_name + '\n'
-
+    input_product_index = int(input('enter product index:'))
+    product_list.pop(input_product_index)
+    
     with open('product.txt', 'w') as file:
-	    file.writelines(product_list)
+	    file.writelines(product_list.pop)
 
 
 def display(filename):
