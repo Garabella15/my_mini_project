@@ -131,29 +131,29 @@ while True:
                 break
                 
 #enter Courier menu
-    elif user_option == 2: 
+    # elif user_option == 2: 
 
-        while True:
-            Courier_options()
-            courier_menu = int(input('enter courier options:'))
+    #     while True:
+    #         Courier_options()
+    #         courier_menu = int(input('enter courier options:'))
 
-            # return to main menu
-            if courier_menu== 0:
-                break
+    #         # return to main menu
+    #         if courier_menu== 0:
+    #             break
 
-            # print Courier list
-            elif courier_menu == 1:
-                Courier_list = display('Courier.txt')
-                continue
-            # create new Courier 
-            elif courier_menu == 2:
-               import  Create_new_courier.py
+    #         # print Courier list
+    #         elif courier_menu == 1:
+    #             Courier_list = display('Courier.txt')
+    #             continue
+    #         # create new Courier 
+    #         elif courier_menu == 2:
+    #            import  Create_new_courier.py
                 
-            elif courier_menu == 3:
-                update_courier_list = item_update()
+    #         elif courier_menu == 3:
+    #             update_courier_list = item_update()
             
-            elif courier_menu == 4:
-                Amended_courier_list = delete_item_list()
+    #         elif courier_menu == 4:
+    #             Amended_courier_list = delete_item_list()
                 break
 
 # print ('good bye')
