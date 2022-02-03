@@ -13,3 +13,18 @@ def add_product_to_file(filename, product_name):
 
     fd.write(product_name)
     fd.close()
+
+
+def display(filename):
+    # filename = input('Enter name of File: ')
+    content_list = []
+    # try:
+    fo = open(filename, "r")
+    lines = fo.readlines()
+    for line in lines:
+        if line.strip() == "":
+            continue
+        else:
+            content_list.append(line.strip())
+    print(content_list)
+    return lines

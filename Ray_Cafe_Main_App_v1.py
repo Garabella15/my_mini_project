@@ -34,24 +34,7 @@ def Courier_options():
     ''')
 
 
-import create_new_product
-create_new_product()
 
-import update_product_list
-update_product_list()
-
-import delete_product_from_list
-delete_product_from_list()
-
-
-import Create_new_Courier
-Create_new_Courier()
-
-import update_Courier_list
-update_Courier_list()
-
-import delete_Courier_from_list
-delete_Courier_from_list()
 
 
 
@@ -99,16 +82,19 @@ while True:
 
             # Create new product 
             elif product_menu == 2:
+                import create_new_product
                 create_new_product()
                 
                 
             # Return updated product list
             elif product_menu == 3:
+                import update_product_list
                 update_product_list()
                 
             
             # delete item in product list
             elif product_menu == 4:
+                import delete_product_from_list
                 delete_product_from_list()
                 break
                 
@@ -127,18 +113,21 @@ while True:
             # print Courier list
             elif courier_menu == 1:
                 Courier_list = display('Courier.txt')
-                continue
+                
             # create new Courier 
             elif courier_menu == 2:
+                import Create_new_Courier
                 Create_new_Courier()
 
                 
             elif courier_menu == 3:
+                import update_Courier_list
                 update_Courier_list()
             
             elif courier_menu == 4:
+                import delete_Courier_from_list
                 delete_Courier_from_list()
                 break
 
-# print ('good bye')
+print ('good bye')
 
