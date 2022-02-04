@@ -1,9 +1,9 @@
-def delete_Courier_from_list ():
+def delete_Courier_list ():
     Courier_list = display('Courier.txt')
     input_Courier_index = int(input('enter Courier index:'))
     Courier_list.pop(input_Courier_index)
     
-    with open('product.txt', 'w') as file:
+    with open('Courier.txt', 'w') as file:
 	    file.writelines(Courier_list.pop)
 
     

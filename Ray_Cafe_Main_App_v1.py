@@ -19,8 +19,8 @@ def product_options():
     0. return to main menu 
     1. list product  
     2. Create new product 
-    3. update product list 
-    4. delete product  
+    3. update product from list 
+    4. delete product from list 
     ''')
 
 def Courier_options(): 
@@ -29,8 +29,8 @@ def Courier_options():
     0. return to main menu 
     1. list Courier  
     2. Create new Courier 
-    3. update Courier list 
-    4. delete Courier  
+    3. update Courier from list 
+    4. delete Courier from list  
     ''')
 
 
@@ -82,19 +82,19 @@ while True:
 
             # Create new product 
             elif product_menu == 2:
-                import create_new_product
+                from New_product import create_new_product
                 create_new_product()
                 
                 
             # Return updated product list
             elif product_menu == 3:
-                import update_product_list
+                from Update_product import update_product_list
                 update_product_list()
                 
             
             # delete item in product list
             elif product_menu == 4:
-                import delete_product_from_list
+                from delete_product import delete_product_from_list
                 delete_product_from_list()
                 break
                 
@@ -116,17 +116,17 @@ while True:
                 
             # create new Courier 
             elif courier_menu == 2:
-                import Create_new_Courier
-                Create_new_Courier()
+                from  Create__Courier import create_new_Courier
+                create_new_Courier()
 
                 
             elif courier_menu == 3:
-                import update_Courier_list
+                from update_Courier import update_Courier_list
                 update_Courier_list()
             
             elif courier_menu == 4:
-                import delete_Courier_from_list
-                delete_Courier_from_list()
+                from delete_Courier import delete_Courier__list
+                delete_Courier_list()
                 break
 
 print ('good bye')

@@ -1,10 +1,10 @@
-def update_product_list (): 
-    product_list = display('product.txt')
+def update_Courier_list (): 
+    product_list = display('Courier.txt')
     product_index= int(input('enter the index of the product:'))
     new_product_name=input('enter another product:')
     product_list[product_index] = new_product_name + '\n'
 
-    with open('product.txt', 'w') as file:
+    with open('Courier.txt', 'w') as file:
 	    file.writelines(product_list)
 
 
