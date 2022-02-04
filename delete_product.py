@@ -4,7 +4,7 @@ def delete_product_from_list ():
     product_list.pop(input_product_index)
     
     with open('product.txt', 'w') as file:
-	    file.writelines(product_list.pop)
+	    file.writelines(product_list)
 
 
 def display(filename):

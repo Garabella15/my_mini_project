@@ -1,11 +1,11 @@
 def update_Courier_list (): 
-    product_list = display('Courier.txt')
-    product_index= int(input('enter the index of the product:'))
-    new_product_name=input('enter another product:')
-    product_list[product_index] = new_product_name + '\n'
+    Courier_list = display('Courier.txt')
+    Courier_index= int(input('enter the index of the Courier:'))
+    new_Courier_name=input('enter another Courier:')
+    Courier_list[Courier_index] = new_Courier_name + '\n'
 
     with open('Courier.txt', 'w') as file:
-	    file.writelines(product_list)
+	    file.writelines(Courier_list)
 
 
 

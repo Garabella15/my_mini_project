@@ -4,9 +4,9 @@ def delete_Courier_list ():
     Courier_list.pop(input_Courier_index)
     
     with open('Courier.txt', 'w') as file:
-	    file.writelines(Courier_list.pop)
+	    file.writelines(Courier_list)
 
-    
+
 def display(filename):
     # filename = input('Enter name of File: ')
     content_list = []

@@ -2,6 +2,9 @@
 # allows for creating, updating and deleting product and courier in addition to data persistence.
 
 
+from delete_Courier import delete_Courier_list
+
+
 print(f' Welcome to Ray Cafe')
 
 def main_options (): 
@@ -101,7 +104,6 @@ while True:
 
 #enter Courier menu
     elif user_option == 2: 
-
         while True:
             Courier_options()
             courier_menu = int(input('enter courier options:'))
@@ -118,14 +120,16 @@ while True:
             elif courier_menu == 2:
                 from  Create__Courier import create_new_Courier
                 create_new_Courier()
-
                 
+
+            # updating the courier list     
             elif courier_menu == 3:
                 from update_Courier import update_Courier_list
                 update_Courier_list()
-            
+
+            # delete item from the courier list
             elif courier_menu == 4:
-                from delete_Courier import delete_Courier__list
+                from delete_Courier import delete_Courier_list
                 delete_Courier_list()
                 break
 
