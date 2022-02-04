@@ -37,16 +37,19 @@
 # Courier_options()
 
 
-filename = input('Enter name of File: ')
-content_list = []
-try:
-    fo = open(filename, "r")
-    lines = fo.readlines()
-    for line in lines:
-        if line.strip() == "":
-            continue
-        else:
-            content_list.append(line.strip())
-    print(content_list)
-except FileNotFoundError as fnfe:
-    print('Unable to open file: ' + str(fnfe))
+# filename = input('Enter name of File: ')
+# content_list = []
+# try:
+#     fo = open(filename, "r")
+#     lines = fo.readlines()
+#     for line in lines:
+#         if line.strip() == "":
+#             continue
+#         else:
+#             content_list.append(line.strip())
+#     print(content_list)
+# except FileNotFoundError as fnfe:
+#     print('Unable to open file: ' + str(fnfe))
+
+from rough import create_new_product
+create_new_product()
