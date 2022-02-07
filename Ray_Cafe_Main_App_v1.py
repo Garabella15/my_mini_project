@@ -36,10 +36,19 @@ def Courier_options():
     4. delete Courier from list  
     ''')
 
+def Order_options(): 
+    print(
+    ''' 
+    0. return to main menu 
+    1. Print Dictionary  
+    2. Enter Customer details
+    3. update existing Order Status 
+    4. Update exiting Order
+    5. delete Courier from Order list  
+    ''')
 
 
-
-
+Order_list = {}
 
 def display(filename):
     # filename = input('Enter name of File: ')
@@ -109,7 +118,7 @@ while True:
             courier_menu = int(input('enter courier options:'))
 
             # return to main menu
-            if courier_menu== 0:
+            if courier_menu == 0:
                 break
 
             # print Courier list
@@ -132,6 +141,25 @@ while True:
                 from delete_Courier import delete_Courier_list
                 delete_Courier_list()
                 break
+    
 
+    elif user_option == 3:
+        while True:
+            Order_options() 
+            Order_menu = int(input('enter order option: '))
+            
+            # Return to main menu
+            if Order_menu == 0:
+                break
+
+            # print Order list
+            elif Order_menu == 1:
+                print(Order_list)
+
+            # Add Customer Detail
+            elif Order_menu == 2:
+                Add_Customer_info = input('enter Customer info:')
+
+            
 print ('good bye')
 
