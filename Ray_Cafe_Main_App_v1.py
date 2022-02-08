@@ -171,19 +171,20 @@ while True:
 
 
                 for courier in Courier_list:
-                    print('courier :', courier,  " courier number ", Courier_list.index(courier))
+                    print('courier :', courier,  " courier number ", Courier_list.index(courier)) 
+
                     input_courier_index= int(input('enter index of courier:'))
                 # Order_list
                 
-                Current_Order_list_dictionary ={'customer name': input_customer_name, 'customer address': input_customer_address,
-                'customer telephone': input_customer_telephone, 'courier number': input_courier_index, 'order status': 'preparing'}
-                Order_list.append(Current_Order_list_dictionary)
+                # Current_Order_list_dictionary ={'customer name': input_customer_name, 'customer address': input_customer_address,
+                # 'customer telephone': input_customer_telephone, 'courier number': input_courier_index, 'order status': 'preparing'}
+                # Order_list.append(Current_Order_list_dictionary)
 
-            elif Order_menu == 3:
+            # elif Order_menu == 3:
                 # Update_Order_list()
                 
                 
 
 
-                print ('good bye')
+                # print ('good bye')
 
