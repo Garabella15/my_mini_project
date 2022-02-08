@@ -1,4 +1,4 @@
-Customer_name, Customer_address, Customer_telephone, Courier, Order_status
-Raymond Owhondah, "19 Bayswater Crescent, Leeds, LS9 5QG", 07643672311, 2, Preparing
-Kevin Oman, "13 Oxford Road, OX4 2DU", 07654321861, 3, Delivered
-Alex Comb, "53 Lime Grove street, Surrey, GU1 1PG", 1, 07843615291, Enroute
+Received
+Preparing
+Enroute
+Delivered

@@ -2,7 +2,8 @@
 # allows for creating, updating and deleting product and courier in addition to data persistence.
 
 
-from delete_Courier import delete_Courier_list
+
+
 
 
 print(f' Welcome to Ray Cafe')
@@ -40,7 +41,7 @@ def Order_options():
     print(
     ''' 
     0. return to main menu 
-    1. Print Dictionary  
+    1. Print Order list 
     2. Enter Customer details
     3. update existing Order Status 
     4. Update exiting Order
@@ -48,7 +49,7 @@ def Order_options():
     ''')
 
 
-Order_list = {}
+Order_list = []
 
 def display(filename):
     # filename = input('Enter name of File: ')
@@ -158,8 +159,31 @@ while True:
 
             # Add Customer Detail
             elif Order_menu == 2:
-                Add_Customer_info = input('enter Customer info:')
+                # from Create_Order_list import create_order_list
+                # create_order_list()
+                # Order_list.append(Current_Order_list_dictionary)
+                input_customer_name = str(input('enter name:'))
+                input_customer_address = str(input('enter address:'))
+                input_customer_telephone = str(input('enter telephone:'))
+                
+                from customer_detail import return_list
+                Courier_list = return_list('Courier.txt')
 
-            
-print ('good bye')
+
+                for courier in Courier_list:
+                    print('courier :', courier,  " courier number ", Courier_list.index(courier))
+                    input_courier_index= int(input('enter index of courier:'))
+                # Order_list
+                
+                Current_Order_list_dictionary ={'customer name': input_customer_name, 'customer address': input_customer_address,
+                'customer telephone': input_customer_telephone, 'courier number': input_courier_index, 'order status': 'preparing'}
+                Order_list.append(Current_Order_list_dictionary)
+
+            elif Order_menu == 3:
+                # Update_Order_list()
+                
+                
+
+
+                print ('good bye')
 
