@@ -1,10 +1,7 @@
 # the following line of code is used to navigate the product and courier main of Ray's Cafe.it
 # allows for creating, updating and deleting product and courier in addition to data persistence.
 
-
-
-
-
+import csv
 
 print(f' Welcome to Ray Cafe')
 
@@ -168,20 +165,37 @@ while True:
                 
                 from customer_detail import return_list
                 Courier_list = return_list('Courier.txt')
+                # input_index= int(input('enter index of courier:'))
 
+                index = 0
 
                 for courier in Courier_list:
-                    print('courier :', courier,  " courier number ", Courier_list.index(courier)) 
+                    print(index, courier)
+                    index +=1
+                    
+                    # print('courier:', courier, " index ", Courier_list.index(courier) ) 
 
-                    input_courier_index= int(input('enter index of courier:'))
+                input_index= int(input('enter index of courier:'))
                 # Order_list
                 
-                # Current_Order_list_dictionary ={'customer name': input_customer_name, 'customer address': input_customer_address,
-                # 'customer telephone': input_customer_telephone, 'courier number': input_courier_index, 'order status': 'preparing'}
-                # Order_list.append(Current_Order_list_dictionary)
+                Current_Order_list_dictionary ={'customer name': input_customer_name, 'customer address': input_customer_address,
+                'customer telephone': input_customer_telephone, 'courier number': input_index, 'order status': 'preparing'}
+                Order_list.append(Current_Order_list_dictionary)
+                print(Order_list)
 
-            # elif Order_menu == 3:
-                # Update_Order_list()
+                keys = Order_list[0].keys()
+                with open('Order.csv', mode = 'w') as file:
+                    fieldname =['customer name', 'customer address', 'customer telephone', 'courier number', 'order status']
+                    writer=csv.DictWriter(file, fieldnames=fieldname)
+                    writer.writeheader()
+                    writer.writerows(Order_list)
+                    # writer.writerows(map(Order_list))
+                
+
+
+            elif Order_menu == 3:
+                from Update_Order_list import update_order_list
+                update_order_list()
                 
                 
 
