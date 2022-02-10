@@ -196,9 +196,22 @@ while True:
             elif Order_menu == 3:
                 from Update_Order_list import update_order_list
                 update_order_list()
+                from Order_status import order_status
+                order_status()
+                
+                
+                input_order_index = int(input('enter index of order list:'))
+                input_order_status_index=int(input('enter index of order status'))
+                input_order_status= str(input('enter new order status: '))
+                Order_list[input_order_index]['order status'] =input_order_status 
+
+                
+                
                 
                 
 
+                # print(f' order status is updated {Order_list}')
+                # print(f'the Order is {input_Order_status_index}')
 
                 # print ('good bye')
 
