@@ -45,8 +45,8 @@ def Order_options():
     5. delete Courier from Order list  
     ''')
 
+Order_status =['Received','Preparing','out-for-delivery','delivered']
 
-Order_list = []
 
 def display(filename):
     # filename = input('Enter name of File: ')
@@ -152,6 +152,8 @@ while True:
 
             # print Order list
             elif Order_menu == 1:
+                from Order_status import read_csv
+                Order_list=read_csv()
                 print(Order_list)
 
             # Add Customer Detail
@@ -194,23 +196,24 @@ while True:
 
 
             elif Order_menu == 3:
-                from Update_Order_list import update_order_list
-                update_order_list()
+                from Update_Order_list import update_order
+                update_order(Order_list)
+                print(Order_list)
+                input_order_index=int(input('enter order index: '))
 
 
-                from Order_status import order_status
-                order_status()
+                for index, status in enumerate(Order_status):
+                    print(index, status)
                 
-                
-                input_order_index = int(input('enter index of order list:'))
                 input_order_status_index=int(input('enter index of order status:'))
-                input_order_status= str(input('enter new order status: '))
-                Order_list[]['order status'] = input_order_status 
-
+                Order_list[input_order_index]['order status'] = Order_status[input_order_status_index]
+                
+                from Order_status import write_csv
+                Order=write_csv('Order.csv', Order_list)
+                print(Order)
                 
                 
-                
-                
+            elif Order_menu== 4:
 
                 # print(f' order status is updated {Order_list}')
                 # print(f'the Order is {input_Order_status_index}')

@@ -1,5 +1,4 @@
-customer name,customer address,customer telephone,courier number,order status
-Ray Ogundu,"42 Woodsley Road, Leeds, LS3 1DT",07643521231,0,preparing
-Rita Njweu,"18 Bayswater Crescent,Leeds, LS5 8QG",07893254321,1,preparing
-Kate Young,"13 Oxford Road, Leeds, LS2 9PR",07789120021,3,preparing
-Alex Maxs,"25 Grace crescent, Oxford, OX4 2DU",07994865989,4,preparing
+customer name,customer address,customer telephone,courier number,order status
+Molly,"346 Hollow ways, Oxford, OX3 1PP",07983265312,5,preparing
+Raymond,"18 Bayswater Crescentt, Leeds, LS5 8QG",07653218221,0,delivered
+Rita,"42 woodsley road, Leeds, LS3 1DT",0746532341,3,preparing
