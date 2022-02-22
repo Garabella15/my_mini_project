@@ -1,17 +1,18 @@
+import csv
+import CSV_write
 def create_new_Courier():
-    import csv
-    import CSV_write
-    input_Courier_name = str(input('enter name of Courier:'))
-    input_Courier_telephone = str(input('enter phone number:'))
+    from read_file_to_list import read_courier_csv_file
+    read_courier_csv_file()
+    Courier =[]
+    input_Courier_name = str(input('enter name of courier:'))
+    input_telephone_number = str(input('enter telephone number:'))
 
-    from read_file_to_list import read_csv
-    Courier_list = read_csv('Courier.csv')
     
-    Courier_list_dictionary ={'Name': input_Courier_name, 
-                                'telephone': input_Courier_telephone}
+    Courier_list_dictionary ={'Name':input_Courier_name, 
+                             'telephone':input_telephone_number}
                                 
-    Courier_list.append(Courier_list_dictionary)   
+    Courier.append(Courier_list_dictionary)   
 
-    CSV_write.write_list_of_Courier_dict_to_csv('Courier.csv', Courier_list)
+    CSV_write.Append_new_courier_to_csv_file('Courier.csv', Courier)
     
-    print(Courier_list) 
+    print(Courier)

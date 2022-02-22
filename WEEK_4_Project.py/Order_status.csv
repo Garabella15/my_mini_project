@@ -2,3 +2,9 @@ Received
 Preparing
 Enroute
 Delivered
+
+customer name,customer address,customer telephone,courier number,status
+Molly,"346 Hollow ways, Oxford, OX3 1PP",07983265312,5,preparing
+Raymond,"18 Bayswater Crescentt, Leeds, LS5 8QG",07653218221,0,delivered
+Rita,"42 woodsley road, Leeds, LS3 1DT",0746532341,3,preparing
+Chris,"123 limewalk street, Guildford, GU1 1PG",07655889921,1,preparing

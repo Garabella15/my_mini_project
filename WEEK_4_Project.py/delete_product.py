@@ -1,22 +1,25 @@
-def delete_product_from_list ():
-    product_list = display('product.txt')
-    input_product_index = int(input('enter product index:'))
-    product_list.pop(input_product_index)
-    
-    with open('product.txt', 'w') as file:
-	    file.writelines(product_list)
+import csv
+def read_csv(file_name):
+    product = []
+    with open(file_name) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            product.append(row)
+    print (product)
+
+    for index, row in enumerate(product):
+        print(index, row)
+    input_product_index=int(input('enter index of product:'))
+    product.pop(input_product_index)
+
+    with open(file_name, mode ='w') as file:
+        
+        fieldnames = ['Name', 'price']
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(product)
+        print(product)
 
 
-def display(filename):
-    # filename = input('Enter name of File: ')
-    content_list = []
-    # try:
-    fo = open(filename, "r")
-    lines = fo.readlines()
-    for line in lines:
-        if line.strip() == "":
-            continue
-        else:
-            content_list.append(line.strip())
-    print(content_list)
-    return lines
+
+
