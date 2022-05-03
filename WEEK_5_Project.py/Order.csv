@@ -1,0 +1,9 @@
+customer name,customer address,customer telephone,courier number,status,product
+Raymond,"134 Oxford Road, Oxford, OX4 2DU",0744899663,1,Out_for_delivery,"['1', '4', '8']"
+Rita,"42a Woodsley Road, Leeds, LS3 1DT",07455662210,2,Preparing,"['2', '4', '5']"
+Kevin,"52 Lime grove, Guildford, GU1 1PG",07889945633,3,Out_for_delivery,"['6', '7', '8']"
+Jane,"2 Kelso Road, Leeds, LS2 9SP",07455330002,4,Delivered,"['3', '4', '5']"
+Bosslady,"73 Daisy Street, Bradford, BD1 3PH",0654383232,5,Preparing,"['3', '8', '4']"
+Blak Lads,"12 Shay Street, Leeds, LS6 2PZ",0743986543,6,Delivered,"['5', '6', '7']"
+Mofe,"186 Hollow way, London, SW1 2PE",0654398754,3,Delivered,"['1', ' 7', '6']"
+ MaryJane," 23 London road, Manchester, M1 2WS",0786544303,4,Preparing,"['2', '6', '8']"
